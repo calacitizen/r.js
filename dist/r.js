@@ -32035,7 +32035,15 @@ define('build', function (require) {
                 });
             }
         };
-
+       /***
+        * !!!!!!!!!!!!!!!!!HACK DEFINE !!!!!!!!!!!!!!!!!
+        */
+       requirejs.hackDefine = function hackDefine(newdefine) {
+          define = newdefine;
+       }
+       /***
+        * /!!!!!!!!!!!!!!!!!HACK DEFINE !!!!!!!!!!!!!!!!!
+        */
         requirejs.define = define;
     }
 
